@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是django的第一个实例</title>
+</head>
+<body>
+url中后面name的用法:
+在前端用一定格式写了以后，后端的name'不变，前面的地址可以随便改，不影响访问
+<pre>
+    这里的地址写死了，后端修改了前端也要修改
+</pre>
+<a href = "/addDZF3/4/6"> 计算4+6 </a>
+<hr>
+使用name的作用的实例
+<pre>
+    这里的地址动态写法，只要那么名字不变，那么后端的网址可以随便改
+</pre>
+<a href ="{% url 'usenameTest' 4 10 %}"> 计算4+10 </a>
+<hr>
+<img src="../static/image/dizhizenmeban.png">
+
+</body>
+</html>
