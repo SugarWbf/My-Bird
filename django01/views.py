@@ -3,7 +3,7 @@ from django.urls import reverse
 
 # Create your views here.
 def SayHello(requist):
-    return HttpResponse("hello World")
+    return HttpResponse("hello World！")
 
 def AddWithDZF(requist):
     a = requist.GET.get("a")
@@ -24,3 +24,13 @@ def AddWithDZF2(requist,a,b):
 
 def namefunctionshili(requist):
    return HttpResponseRedirect(reverse("usenameTest",args=(4/5)))
+
+
+
+#django模板的使用
+def homemuban(requist):
+    myname = "SugarStar"
+    namelist = ["张三","李四","王二"]
+    namesexlist = {"张三":"男","李四":"女","王二":"女"}
+    fornamelist = range(10)
+    return render(requist,"homemuban.html",{"myname":myname ,"namelist":namelist,"namesexlist":namesexlist , "fornamelist":fornamelist})

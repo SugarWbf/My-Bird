@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django模板的使用</title>
+</head>
+<body>
+
+<ul>
+    实例1：替换网页中的字符串:
+    <li>
+        <pre>
+        <a> 我的名字是: {{ myname }}</a>
+        </pre>
+    </li>
+    实例2：list遍历,for循环的使用
+    <li>
+        <pre>
+          成员列表是:
+            {% for name in namelist %}
+                {{ name }} {% if not forloop.last %} , {% endif %}
+            {% endfor %}
+        </pre>
+    </li>
+    实例3：字典遍历
+    <li>
+        <pre>
+          成员性别列表是:
+            {% for name ,sex in namesexlist.items %}
+                姓名:{{ name }}      性别:{{ sex }}{% if not forloop.last %} , {% endif %}
+            {% endfor %}
+        </pre>
+    </li>
+
+    实例4：列表遍历列表为空时候
+    <li>
+        <pre>
+          数字列表是:
+            {% for num in fornamelist %}
+                姓名:{{ num }}{% if not forloop.last %} , {% endif %}
+            {% empty %}
+                数字列表为空
+            {% endfor %}
+        </pre>
+    </li>
+    实例5：替换网址，后台更改网址路径，前端无需修改的写法
+    <li>
+        <pre>
+            url中后面的name名字 如果有参数加参数，用空格隔开%,用的是逻辑号包括起来
+        </pre>
+    </li>
+    实例6：and not in or 等逻辑符号使用
+    <li>
+        <pre>
+            1 是不是比 2 大
+            {% if 1 > 2 %}
+                结果1 比 2 大
+            {% else %}
+                1 没有 2 大
+            {% endif %}
+            张三的名字在 名字列表中吗？
+            {% if "张三" in  namelist %}
+                张三在名单中
+            {% endif %}
+        </pre>
+    </li>
+</ul>
+
+
+
+</body>
+</html>

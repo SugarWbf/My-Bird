@@ -25,5 +25,8 @@ urlpatterns = [
     url(r'^addDZF2/(\d+)/(\d+)/$', django01.AddWithDZF1),  # 这是简化的请求，使用的是正则表达式r'
     #url中name的作用
     url(r'^nameindex/', django01.nameindex),
-    url(r'^addDZF5/(\d+)/(\d+)/$', django01.AddWithDZF2, name="usenameTest")#使用了name后，只要前端有对应的写法，那么网址可以随便改
+    url(r'^addDZF5/(\d+)/(\d+)/$', django01.AddWithDZF2, name="usenameTest"),#使用了name后，只要前端有对应的写法，那么网址可以随便改
+    #######################################################################################################
+    #模板的使用
+    url(r'^homemuban/', django01.homemuban)
 ]
