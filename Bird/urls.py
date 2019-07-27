@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 import  django01.views as django01
+import django02.views as django02
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
@@ -28,5 +29,7 @@ urlpatterns = [
     url(r'^addDZF5/(\d+)/(\d+)/$', django01.AddWithDZF2, name="usenameTest"),#使用了name后，只要前端有对应的写法，那么网址可以随便改
     #######################################################################################################
     #模板的使用
-    url(r'^homemuban/', django01.homemuban)
+    url(r'^homemuban/', django01.homemuban),
+    #Orm数据库使用
+    url(r'ORMTest/',django02.ORMTest)
 ]
