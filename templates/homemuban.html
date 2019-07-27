@@ -64,7 +64,20 @@
             {% endif %}
         </pre>
     </li>
+    实例7：在模板中获取当前用户名字和登陆状态
+    <li>
+        <pre>
+            1.获取当前路径:
+            {{ request.path }}
+            2.获取当前get参数：
+            {{ request.GET.urlencode }}
+            3.获取当前用户和用户的登录状态
+            request.user
+            request.user.is_authenticated
+        </pre>
+    </li>
 </ul>
+
 
 
 
