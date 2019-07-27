@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是数据库ORM实例</title>
+     <link href="../../static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .shuzhi{
+            padding-top: 10%;
+        }
+    </style>
+</head>
+<body>
+ hello,{% for k ,v in result.items %}{% if k == "name"  %}{{ v }} {% endif %}{% endfor %}
+你计算的结果是：{% for k ,v in result.items %}{% if k == "s"  %}{{ v }} {% endif %}{% endfor %}
+</body>
+</html>

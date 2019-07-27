@@ -18,6 +18,7 @@ from django.contrib import admin
 
 import  django01.views as django01
 import django02.views as django02
+import django03.views as django03
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
@@ -31,5 +32,9 @@ urlpatterns = [
     #模板的使用
     url(r'^homemuban/', django01.homemuban),
     #Orm数据库使用
-    url(r'ORMTest/',django02.ORMTest)
+    url(r'ORMTest/',django02.ORMTest),
+    #from表单使用
+    url(r'^useform/',  django03.useForm),
+
+
 ]
