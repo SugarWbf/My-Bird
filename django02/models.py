@@ -5,7 +5,7 @@ from django.db import models
 class student(models.Model):
     num = models.AutoField(primary_key=True),
     name = models.CharField(null=False, max_length=30)
-    #name = models.CharField(null=False, max_length=30)
+    name1 = models.CharField(null=False, max_length=30,default="")
     age = models.IntegerField()
 
     def __str__(self):

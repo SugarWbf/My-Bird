@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>这是数据库ORM实例</title>
+     <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .shuzhi{
+            padding-top: 10%;
+        }
+    </style>
 </head>
 <body>
- <form method="post" action="/ORMTest/" >
-     请输入名字：<input type="text" name = "stu_name">
-     请输入年龄：<input type="text" name = "stu_age">
-     <input type="submit" value="提交">
+ <form method="post" action="/ORMTest/" class="center-block row shuzhi ">
+     <p class="col-lg-4 col-lg-offset-5">
+         请输入名字：<input type="text" class="input-group col-lg-4" name = "stu_name">
+         请输入年龄：<input type="text" class="input-group col-lg-4" name = "stu_age">
+         <input type="submit" class="btn col-sm-4" value="提交">
+     </p>
+
  </form>
 </body>
 </html>
