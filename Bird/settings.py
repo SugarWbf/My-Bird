@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from typing import Union
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -123,7 +125,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#这一句是为了在部署的时候将各个app中的静态文件复制到一起的
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+
+
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
 
