@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django01.apps.Django01Config',
     'django02',
-    'django03'
+    'django03',
+     "Bird",
 ]
 
 MIDDLEWARE = [
